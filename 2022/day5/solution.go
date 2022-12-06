@@ -18,13 +18,12 @@ func getStartingState(state string) [][]string {
 	for scanner.Scan() {
 		var line []string
 		input := scanner.Text()
-		for i, _ := range input {
+		for i := range input {
 			if i%4 == 0 {
 				line = append(line, string(input[i+1]))
 			}
 		}
 		intermediate = append(intermediate, line)
-		line = []string{}
 	}
 
 	for i := 0; i < len(intermediate)-1; i++ {

@@ -31,7 +31,7 @@ func Part1Solution() {
 
 	stringLength := 3
 
-	for i, _ := range fileContents {
+	for i := range fileContents {
 		if i >= stringLength {
 			result := checkCharacters(fileContents[i-stringLength : i+1])
 
@@ -53,7 +53,7 @@ func Part2Solution() {
 
 	stringLength := 13
 
-	for i, _ := range fileContents {
+	for i := range fileContents {
 		if i >= stringLength {
 			result := checkCharacters(fileContents[i-stringLength : i+1])
 
